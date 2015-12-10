@@ -2,16 +2,29 @@
 <html ng-app="quizzy">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Quizzy</title>
+
+        <!--Vendor styles-->
+            <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" media="screen" charset="utf-8">
+        <!--/Vendor styles-->
+
+        <!--App styles-->
+            <link rel="stylesheet" href="styles/app.css" media="screen" charset="utf-8">
+        <!--/App styles-->
+
     </head>
     <body ng-controller="QuizzyController">
 
-        <div class="chat-area" ng-include="'js/chat/chat.html'"></div>
+        <div class="container">
+            <div class="chat-area" ng-include="'js/chat/chat.html'"></div>
+        </div>
 
         <!--Vendor scripts-->
             <script src="bower_components/angular/angular.min.js" charset="utf-8"></script>
             <script src="bower_components/angular-socket-io/socket.min.js" charset="utf-8"></script>
             <script src="bower_components/socket.io-client/socket.io.js" charset="utf-8"></script>
+            <script src="bower_components/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
         <!--/Vendor scripts-->
 
         <!--App scripts-->
@@ -19,15 +32,24 @@
             <!--Modules-->
                 <script src="js/app/app.js" charset="utf-8"></script>
                 <script src="js/chat/chat.js" charset="utf-8"></script>
+            <!--/Modules-->
+
             <!--Controllers-->
                 <script src="js/app/appController.js" charset="utf-8"></script>
                 <script src="js/chat/chatController.js" charset="utf-8"></script>
+            <!--/Controllers-->
+
             <!--Services-->
                 <script src="js/app/services/socketService.js" charset="utf-8"></script>
+            <!--/Services-->
+
             <!--Run-->
                 <script src="js/app/appRun.js" charset="utf-8"></script>
+            <!--/Run-->
+
             <!--Directives-->
                 <script src="js/app/directives/enterBtn.js" charset="utf-8"></script>
+            <!--/Directives-->
 
         <!--/App scripts-->
 

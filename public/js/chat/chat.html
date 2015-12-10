@@ -1,8 +1,18 @@
 <div ng-controller="ChatController">
-    <input type="text" name="name" ng-model="message"  on-enter="sendMessage()">
-    <input type="button" name="name" value="Send" ng-click="sendMessage()">
-
-    <ul>
-        <li ng-repeat="message in messages track by $index" ng-bind="message"></li>
-    </ul>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Chat Window</h3>
+      </div>
+      <div class="panel-body">
+          <p ng-repeat="message in messages track by $index" ng-bind="message"></p>
+      </div>
+      <div class="panel-footer">
+          <div class="input-group">
+                <input type="text" class="form-control" placeholder="Message..." ng-model="message" on-enter="sendMessage()">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button" ng-click="sendMessage()">Send</button>
+              </span>
+          </div>
+      </div>
+  </div>
 </div>
