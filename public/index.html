@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="quizzy">
+    <head>
+        <meta charset="utf-8">
+        <title>Quizzy</title>
+    </head>
+    <body ng-controller="QuizzyController">
+
+        <div class="chat-area" ng-include="'js/chat/chat.html'"></div>
+
+        <!--Vendor scripts-->
+            <script src="bower_components/angular/angular.min.js" charset="utf-8"></script>
+            <script src="bower_components/angular-socket-io/socket.min.js" charset="utf-8"></script>
+            <script src="bower_components/socket.io-client/socket.io.js" charset="utf-8"></script>
+        <!--/Vendor scripts-->
+
+        <!--App scripts-->
+
+            <!--Modules-->
+                <script src="js/app/app.js" charset="utf-8"></script>
+                <script src="js/chat/chat.js" charset="utf-8"></script>
+            <!--Controllers-->
+                <script src="js/app/appController.js" charset="utf-8"></script>
+                <script src="js/chat/chatController.js" charset="utf-8"></script>
+            <!--Services-->
+                <script src="js/app/services/socketService.js" charset="utf-8"></script>
+            <!--Run-->
+                <script src="js/app/appRun.js" charset="utf-8"></script>
+            <!--Directives-->
+                <script src="js/app/directives/enterBtn.js" charset="utf-8"></script>
+
+        <!--/App scripts-->
+
+    </body>
+</html>

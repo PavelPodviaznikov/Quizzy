@@ -1,0 +1,8 @@
+<div ng-controller="ChatController">
+    <input type="text" name="name" ng-model="message"  on-enter="sendMessage()">
+    <input type="button" name="name" value="Send" ng-click="sendMessage()">
+
+    <ul>
+        <li ng-repeat="message in messages track by $index" ng-bind="message"></li>
+    </ul>
+</div>
