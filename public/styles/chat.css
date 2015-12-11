@@ -1,0 +1,29 @@
+.chat-panel {
+    max-width: 600px;
+}
+
+.chat-panel .panel-body{
+    height: 400px;
+    overflow-y: auto;
+}
+
+div.wrap {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+div.cell {
+    display: table-cell;
+    vertical-align: bottom;
+    padding: 5px;
+}
+
+div.cell p.my-message {
+    display: block;
+    padding: 10px;
+    width: 50%;
+    margin-right: 0;
+    margin-left: auto;
+    border-radius: 5px;
+}

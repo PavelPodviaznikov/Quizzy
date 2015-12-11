@@ -1,10 +1,17 @@
+<!DOCTYPE html>
+
 <div ng-controller="ChatController">
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title">Chat Window</h3>
       </div>
       <div class="panel-body">
-          <p ng-repeat="message in messages track by $index" ng-bind="message"></p>
+          <div class="wrap">
+            <div class="cell">
+                <p class="my-message bg-info" ng-repeat="message in messages track by $index" ng-bind="message"></p>
+            </div>
+        </div>
+
       </div>
       <div class="panel-footer">
           <div class="input-group">
