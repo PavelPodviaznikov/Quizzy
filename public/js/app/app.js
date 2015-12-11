@@ -5,8 +5,11 @@
 
         /***** App modules *****/
         'chat',
+        'modals',
+        'models',
 
         /***** Vendor modeules *****/
-        'btford.socket-io'
+        'btford.socket-io',
+        'ui.bootstrap'
     ]);
 })();
