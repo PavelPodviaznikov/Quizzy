@@ -4,8 +4,10 @@
     angular.module('quizzy')
         .controller('QuizzyController', quizzyController);
 
-    function quizzyController () {
-        
+    quizzyController.$inject = ['modalService'];
+
+    function quizzyController (modalService) {
+        modalService.openWelcomeModal();
     }
 
 })();
