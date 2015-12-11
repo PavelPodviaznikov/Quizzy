@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html ng-app="quizzy">
     <head>
         <meta charset="utf-8">
@@ -11,13 +12,14 @@
 
         <!--App styles-->
             <link rel="stylesheet" href="styles/app.css" media="screen" charset="utf-8">
+            <link rel="stylesheet" href="styles/chat.css" media="screen" charset="utf-8">
         <!--/App styles-->
 
     </head>
     <body ng-controller="QuizzyController">
 
         <div class="container">
-            <div class="chat-area" ng-include="'js/chat/chat.html'"></div>
+            <div class="chat-panel" ng-include="'js/chat/chat.html'"></div>
         </div>
 
         <!--Vendor scripts-->
@@ -25,6 +27,8 @@
             <script src="bower_components/angular-socket-io/socket.min.js" charset="utf-8"></script>
             <script src="bower_components/socket.io-client/socket.io.js" charset="utf-8"></script>
             <script src="bower_components/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
+            <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js" charset="utf-8"></script>
+            <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js" charset="utf-8"></script>
         <!--/Vendor scripts-->
 
         <!--App scripts-->
@@ -32,15 +36,19 @@
             <!--Modules-->
                 <script src="js/app/app.js" charset="utf-8"></script>
                 <script src="js/chat/chat.js" charset="utf-8"></script>
+                <script src="js/modals/modals.js" charset="utf-8"></script>
+                <script src="js/models/models.js" charset="utf-8"></script>
             <!--/Modules-->
 
             <!--Controllers-->
                 <script src="js/app/appController.js" charset="utf-8"></script>
                 <script src="js/chat/chatController.js" charset="utf-8"></script>
+                <script src="js/modals/welcome/welcomeModalController.js" charset="utf-8"></script>
             <!--/Controllers-->
 
             <!--Services-->
                 <script src="js/app/services/socketService.js" charset="utf-8"></script>
+                <script src="js/modals/modalService.js" charset="utf-8"></script>
             <!--/Services-->
 
             <!--Run-->
@@ -50,6 +58,10 @@
             <!--Directives-->
                 <script src="js/app/directives/enterBtn.js" charset="utf-8"></script>
             <!--/Directives-->
+
+            <!--Models-->
+                <script src="js/models/user.js" charset="utf-8"></script>
+            <!--/Models-->
 
         <!--/App scripts-->
 
