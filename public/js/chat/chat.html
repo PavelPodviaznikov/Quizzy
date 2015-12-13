@@ -4,11 +4,15 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title">Chat Window</h3>
+        <span>{{activeUser.name}}</span>
       </div>
       <div class="panel-body">
           <div class="wrap">
             <div class="cell">
-                <p class="my-message bg-info" ng-repeat="message in messages track by $index" ng-bind="message"></p>
+                <div ng-repeat="message in messages track by $index" ng-class="{'my-message': isMyMessage(message), 'other-message': !isMyMessage(message)}">
+                    <p class="text" ng-bind="message.text"></p>
+                    <p class="author" ng-bind="message.author"></p>
+                </div>
             </div>
         </div>
 

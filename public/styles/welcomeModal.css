@@ -1,0 +1,54 @@
+.modal-body {
+    color: #a5b4bb;
+    background: #1e4456;
+}
+
+.welcome-modal-header {
+    position: relative;
+}
+
+.welcome-modal-header h1 {
+    display: inline-block;
+}
+
+.welcome-modal-header .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    opacity: 1;
+}
+
+.welcome-modal-header .close:hover {
+    opacity: .2;
+}
+
+.welcome-modal-body {
+    margin-bottom: 25px;
+}
+
+.welcome-modal-body p,
+.welcome-modal-body input {
+    font-size: 18px;
+}
+
+.welcome-modal-body input {
+    background: e8ecee;
+}
+
+.welcome-modal-footer {
+    text-align: right;
+}
+
+.welcome-modal-footer button {
+    width: 100px;
+    height: 45px;
+    color: #fff;
+    background: #4a776f;
+    font-size: 18px;
+}
+
+.welcome-modal-footer button:hover {
+    color: #dbe1e3;
+    background: #618881;
+}

@@ -7,7 +7,6 @@
     modalService.$inject = ['$modal'];
 
     function modalService ($modal) {
-
         function welcomeModal () {
             return $modal.open({
                 animation: true,

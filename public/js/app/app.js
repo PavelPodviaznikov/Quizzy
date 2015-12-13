@@ -6,7 +6,7 @@
         /***** App modules *****/
         'chat',
         'modals',
-        'models',
+        'user',
 
         /***** Vendor modeules *****/
         'btford.socket-io',

@@ -7,6 +7,14 @@
     overflow-y: auto;
 }
 
+.panel-heading h3 {
+    display: inline-block;
+}
+
+.panel-heading span {
+    float: right;
+}
+
 div.wrap {
     display: table;
     height: 100%;
@@ -19,11 +27,33 @@ div.cell {
     padding: 5px;
 }
 
-div.cell p.my-message {
+div.cell .my-message {
     display: block;
     padding: 10px;
     width: 50%;
     margin-right: 0;
     margin-left: auto;
     border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: #d9edf7;
+}
+
+div.cell .other-message {
+    display: block;
+    padding: 10px;
+    width: 50%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: #c3d5de;
+}
+
+.my-message .text,
+.other-message .text {
+    font-size: 18px;
+}
+
+.my-message .author,
+.other-message .author {
+    margin-bottom: 0;
+    text-align: right;
 }

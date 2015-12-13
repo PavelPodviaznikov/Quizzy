@@ -4,10 +4,15 @@
     angular.module('quizzy')
         .factory('authService', authService);
 
-    function authService () {
+    authService.$inject = ['socketService', 'userService'];
 
-        function login () {
-            
+    function authService (socketService, userService) {
+
+        function login (user) {
+            socketService.send('login', user);
+            socketService.listen('logined', function (data) {
+                userService.setActiveUser(data);
+            });
         }
 
         return {

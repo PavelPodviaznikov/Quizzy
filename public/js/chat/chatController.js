@@ -4,13 +4,15 @@
     angular.module('chat')
         .controller('ChatController', chatController);
 
-        chatController.$inject = ['$scope', '$element', '$timeout', 'socketService'];
+        chatController.$inject = ['$scope', '$element', '$timeout', 'socketService', 'userService'];
 
-        function chatController ($scope, $element, $timeout, socketService) {
+        function chatController ($scope, $element, $timeout, socketService, userService) {
 
             $scope.message = '';
+            $scope.activeUser = userService.getActiveUser();
             $scope.messages = [];
             $scope.sendMessage = sendMessage;
+            $scope.isMyMessage =  isMyMessage;
 
             socketService.listen('new message', addNewMessage);
 
@@ -32,6 +34,10 @@
                 $timeout(function () {
                     panelBodyElement.scrollTop = panelBodyElement.scrollHeight - panelBodyElement.offsetHeight;
                 }, 50);
+            }
+
+            function isMyMessage (message) {
+                return message.author === $scope.activeUser.name;
             }
 
         }
