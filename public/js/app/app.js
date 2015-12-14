@@ -7,6 +7,8 @@
         'chat',
         'modals',
         'user',
+        'onlineUsers',
+        'privateDialog',
 
         /***** Vendor modeules *****/
         'btford.socket-io',

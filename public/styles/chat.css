@@ -1,7 +1,3 @@
-.chat-panel {
-    max-width: 600px;
-}
-
 .chat-panel .panel-body{
     height: 400px;
     overflow-y: auto;

@@ -20,7 +20,9 @@
     <body ng-controller="QuizzyController">
 
         <div class="container">
-            <div class="chat-panel" ng-include="'js/chat/chat.html'"></div>
+            <div class="col-lg-8 col-md-8 col-sm-12 chat-panel" ng-include="'js/chat/chat.html'"></div>
+            <div class="col-lg-4 col-md-4 col-sm-12 online-users-panel" ng-include="'js/onlineUsers/onlineUsers.html'"></div>
+            <!--<div class="private-dialog-panel" ng-include="'js/privateDialog/privateDialog.html'"></div>-->
         </div>
 
         <!--Vendor scripts-->
@@ -39,12 +41,16 @@
                 <script src="js/chat/chat.js" charset="utf-8"></script>
                 <script src="js/modals/modals.js" charset="utf-8"></script>
                 <script src="js/user/user.js" charset="utf-8"></script>
+                <script src="js/onlineUsers/onlineUsers.js" charset="utf-8"></script>
+                <script src="js/privateDialog/privateDialog.js" charset="utf-8"></script>
             <!--/Modules-->
 
             <!--Controllers-->
                 <script src="js/app/appController.js" charset="utf-8"></script>
                 <script src="js/chat/chatController.js" charset="utf-8"></script>
                 <script src="js/modals/welcome/welcomeModalController.js" charset="utf-8"></script>
+                <script src="js/onlineUsers/onlineUsersController.js" charset="utf-8"></script>
+                <script src="js/privateDialog/privateDialogController.js" charset="utf-8"></script>
             <!--/Controllers-->
 
             <!--Services-->
@@ -52,6 +58,7 @@
                 <script src="js/modals/modalService.js" charset="utf-8"></script>
                 <script src="js/app/services/authService.js" charset="utf-8"></script>
                 <script src="js/user/userService.js" charset="utf-8"></script>
+                <script src="js/privateDialog/privateDialogService.js" charset="utf-8"></script>
             <!--/Services-->
 
             <!--Run-->

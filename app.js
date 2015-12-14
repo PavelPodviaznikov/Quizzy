@@ -17,6 +17,8 @@ server.listen('3000', function () {
 
 io.sockets.on('connection', function (socket) {
 
+    io.sockets.emit('online users', onlineUsers);
+
     socket.on('message send', function (message) {
         io.sockets.emit('new message', {author: getUserByConnectionId(socket.id).name, text: message});
     });
@@ -24,6 +26,7 @@ io.sockets.on('connection', function (socket) {
     socket.on('login', function (user) {
         onlineUsers.push({socketId: socket.id, user: user});
         socket.emit('logined', {socketId: socket.id, user: user});
+        io.sockets.emit('online users', onlineUsers);
     });
 
     socket.on('disconnect', function () {
@@ -33,6 +36,7 @@ io.sockets.on('connection', function (socket) {
             }
         });
 
+        io.sockets.emit('online users', onlineUsers);
     });
 });
 
